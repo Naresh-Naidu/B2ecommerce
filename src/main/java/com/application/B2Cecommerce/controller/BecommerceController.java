@@ -45,19 +45,19 @@ public class BecommerceController {
 		return new ResponseEntity<List<Product>>(service.getAllProduct(), HttpStatus.OK);
 	}
 	
-	@GetMapping("brand/name")
+	@GetMapping("brandname/{name}")
 	public ResponseEntity<List<Product>> getAllByBrand(@PathVariable String name){
 		
 		return new ResponseEntity<List<Product>>(service.getAllProdcutByBrand(name), HttpStatus.OK);
 	}
 	
-	@GetMapping("color/name")
+	@GetMapping("colors/{name}")
 	public ResponseEntity<List<Product>> getAllByColor(@PathVariable String name){
 		
 		return new ResponseEntity<List<Product>>(service.getAllProdcutByColor(name), HttpStatus.OK);
 	}
 	
-	@GetMapping("price/money")
+	@GetMapping("price/{money}")
 	public ResponseEntity<List<Product>> getAllByPrice(@PathVariable Double money){
 		
 		return new ResponseEntity<List<Product>>(service.getAllProdcutByPrice(money), HttpStatus.OK);
