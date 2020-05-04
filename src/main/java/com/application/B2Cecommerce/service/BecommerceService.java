@@ -24,7 +24,7 @@ public class BecommerceService {
 		if (!becommerceRepository.findById(productId).isPresent()) {
 			throw new ProdctNotFoundException("product Not exist");
 		} else {
-			product.setId(productId);
+			//product.setId(productId);
 			return becommerceRepository.save(product);
 		}
 	}
